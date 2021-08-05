@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f5f8;
+}
+
+.wrapper {
+  width: 35rem;
+}
+
+.btnSubmit {
+  width: 100%;
+}
+
+.uploadedImageDiv {
+  display: flex;
+}
+
+.uploadedImageDiv img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.uploadedImageDiv .grpBtn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

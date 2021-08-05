@@ -1,0 +1,30 @@
+extends layouts
+block content
+  section(class="container border p-3 mt-3 wrapper")
+    div(class="h4 text-center text-primary") MongoDB File Upload
+    form(method="POST" enctype="multipart/form-data" action="/upload")
+      div(class="input-group mb-3")
+          input(type="file" class="form-control" id="inputGroupFile02" name="file")
+          label(class="input-group-text" for="inputGroupFile02") Upload
+      button(type="submit" class="btn btnSubmit btn-outline-primary") SUBMIT
+      each file in files
+        div(class="uploadedImageDiv border shadow p-3 mt-2")
+          img(src=`image/${file.filename}` alt="no-photos" class="rounded-circle")
+          div(class="grpBtn p-3 border")
+            div(class="text-center mb-2") Actions
+            button(class="btn btn-outline-danger") DELETE
+            button(type="button" class="btn btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal") UPDATE
+    div(class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      div(class="modal-dialog")
+        div(class="modal-content")
+          div(class="modal-header")
+            h5(class="modal-title text-center" id="exampleModalLabel") Update Image
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          div(class="modal-body")
+            form(method="POST" enctype="multipart/form-data" action="/upload")
+              div(class="input-group mb-3")
+                  input(type="file" class="form-control" id="inputGroupFile02" name="file" required)
+                  label(class="input-group-text" for="inputGroupFile02") Upload
+              div(class="modal-footer")
+                button(type="button" class="btn btn-secondary" data-bs-dismiss="modal") Close
+                button(type="submit" class="btn btn-primary") Save changes
