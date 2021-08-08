@@ -28,6 +28,7 @@ mongoose.connect(MONGO_DB_URL, {
 })
 
 // Database Connection
+let gridFSBucket;
 let gfs;
 const conn = mongoose.connection
 conn.on('error', console.error.bind('console', 'Failed To Connect To MongoDB'))
