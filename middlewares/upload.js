@@ -1,5 +1,5 @@
 const multer = require('multer')
-const { GridFsStorage } = require('multer-gridfs-storage')
+const { GridFsStorage } = require('@am-chris-ke/multer-gridfs-storage-fixed')
 
 const storage = new GridFsStorage({
   url: process.env.MONGO_DB_URL,

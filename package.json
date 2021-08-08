@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DevHumbleChris/express-mongodb-file-media-upload#readme",
   "dependencies": {
+    "@am-chris-ke/multer-gridfs-storage-fixed": "^5.0.1",
     "body-parser": "^1.19.0",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
@@ -27,7 +28,6 @@
     "mongoose": "^5.13.5",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "multer-gridfs-storage": "^5.0.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {
